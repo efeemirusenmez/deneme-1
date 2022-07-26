@@ -1,7 +1,7 @@
 <?php
 include('header.php');
 ?>
-<h1>hosgeldiniz</h1>
+<h1>hosgelddddiniz</h1>
 <?php
 include('footer.php');
 ?>
