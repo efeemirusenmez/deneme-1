@@ -10,4 +10,6 @@ else if(@$_GET['sayfa'] == 'hakkimizda')
 else 
 {
     include('anasayfa.php');
+
+    //xfhdxfhzgxmgfx
 }
