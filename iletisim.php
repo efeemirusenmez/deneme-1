@@ -24,7 +24,7 @@ margin: 5px 0px 5px 20px;
 color:red
 }
 </style>
-<div class="iletisim">
+<div class="iletisim" action="iletisim.php">
 
           <div class="row g-3">
             <div class="col-sm-6">

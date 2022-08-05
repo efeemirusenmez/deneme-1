@@ -1,20 +1,24 @@
-<h1>
-TARİHÇE
-KURULUŞ
-
-İstanbul’da daha önce kurulmuş olan birkaç spor kulübüne ilave olarak, Cumhuriyet’in ilk yıllarından itibaren yer yer açılmaya başlayan semt kulüplerinin futbol üzerindeki faaliyetleri geniş bir ilgi topluyordu.
-
-İstanbul’un en eski semtlerinden olan Karagümrük’te futbol topu 56 yıl evvel mahalle aralarındaki arsalarda görünmeye başlamıştı. Karagümrüklü gençler, kısa bir müddet sonra iki ayrı teşekkül halinde iddialı maçlar yapmaya başlamışlardı.
-
-Bu iki gruptan birisi Acıçeşme gençleri, diğeri ise Karagümrük gençleriydi. Bu iki grubun aralarında yaptığı maçlar oldukça çekişmeli oluyor, büyük ilgi topluyordu.
-
-Cemil, Mahmut Ali, Alaettin, Abdullah, Mustafa İzmirli, Rahmi, Lemi, Hamza, Bahri, Nazmi, Kadri, Foti, Aleko, Uzun Tahir, Bedri, Davut, Rüstem, Berber Sadık, Canip, Avni, Sami…
-
-Ayrı takımlar halinde çalışan bu gençler civardaki semt kulüpleriyle karşılaşmak istiyorlardı. Büyük bir semtin temsilcisi olarak ayrı ayrı maçlar yapmayı doğru bulmadıklarından araya girenlerin teşebbüsleri ve kendi istekleriyle bir kulüp çatısı altında birleşmeyi kararlaştırdılar.
-
-Her iki gruba mensup gençlerin gösterdikleri anlayış ve fikir birliği ile mahalle oyunundan ayrılıp teşkilatlı bir kulüp etrafında toplanmaları mümkün oldu.
-
-Birleşme uğrunda çalışarak gençlere önderlik yapanlar; Karagümrük grubundan Abdullah, Mustafa İzmirli ve Cemil, Acıçeşme grubundan ise Aleattin, Nazmi, Bedri ve Minareci İzzet oldular.
-
-Karagümrük’ün unutulmaz siması Muhtar Bey’in yardımı ile 1926 yılı ilkbaharında gençler aralarında topladıkları para ile İşkembeci Malik Sokağı’nda bir lokal temin ettiler. Resmi formalite tamamlanarak Karagümrük İdman Yurdu resmen kuruldu.  Kulübün ilk başkanlığına da Arnavut Fevzi Efendi seçildi.
-</h1>
+<form action="https://formspree.io/your@email.com" method="post"> <!-- your@email.com yerine kendi mail adresimizi yazıyoruz. -->
+    <div class="input-block">
+        <label for="contact_author">
+            <strong>Ad Soyad</strong> (gerekli)</label>
+        <input type="text" name="contact_author" id="contact_author" required>
+    </div>
+    <div class="input-block">
+        <label for="_replyto">
+            <strong>E-Posta Adresi</strong> (gerekli)</label>
+        <input type="email" name="_replyto" id="_replyto" required>
+    </div>            
+    <div class="input-block">
+        <label for="contact_subject">
+            <strong>İleti Konusu</strong> (gerekli)</label>
+        <input type="text" name="contact_subject" id="contact_subject" required>
+    </div>
+    <div class="textarea-block">
+        <label for="contact_content">
+            <strong>İleti</strong> (gerekli)</label>
+        <textarea name="contact_content" id="contact_content" required></textarea>
+    </div>
+    <input type="hidden" name="_next" value="https://site.io/thanks.html"> <!-- Form formspree.io adresine gönderildikten sonra tekrar sitenize dönüş yapılarak sitenizdeki thanks.html dosyasının görüntülenmesini sağlıyor. -->
+    <input type="submit" value="GÖNDER">
+</form>
