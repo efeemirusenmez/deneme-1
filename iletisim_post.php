@@ -1,3 +1,16 @@
+
+<?php
+include('header.php');
+?>
+<!--style>
+.login {
+  background-color:dimgrey; 
+}
+.login echo{
+    display:block;
+margin: 110px 770px 0px 62px;
+}
+</style-->
 <?php
 $name = $_POST['firstname'];
 $lastname = $_POST['lastname'];
@@ -12,7 +25,9 @@ echo "</br>" ;
 
 echo "İsim-> $name <br>Soyad-> $lastname<br>Kullanıcı adı-> $username<br>Mail-> $email"
 ?>
-
+<?php
+include('footer.php');
+?>
 
 
 
