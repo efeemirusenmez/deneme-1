@@ -25,9 +25,7 @@ echo "</br>" ;
 
 echo "İsim-> $name <br>Soyad-> $lastname<br>Kullanıcı adı-> $username<br>Mail-> $email"
 ?>
-<?php
-include('footer.php');
-?>
+
 
 
 
