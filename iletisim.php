@@ -42,3 +42,6 @@ margin: 0px 0px 0px 62px;
     </P>
  </form>
 
+ <?php
+include('footer.php');
+?>

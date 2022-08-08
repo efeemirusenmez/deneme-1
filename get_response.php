@@ -21,3 +21,6 @@ else
 echo "Please fill Name and Email";
 }
 ?>
+<?php
+include('footer.php');
+?>
