@@ -28,8 +28,8 @@ margin: 0px 0px 0px 62px;
 
     
     
-    Erkek <input type="radio" name="cinsiyet" value="erkek" checked="on"> 
-    Kadin <input type="radio" name="cinsiyet" value="kadin"> 
+    Erkek <input type="radio" name="cinsiyet" value="1" checked="on"> 
+    Kadin <input type="radio" name="cinsiyet" value="2"> 
     <input type="submit" value="Send">
      <input type="reset" value="Sıfırla">
 
