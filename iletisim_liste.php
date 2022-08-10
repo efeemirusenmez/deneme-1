@@ -37,7 +37,6 @@ else{
 }
 ?>
 
-
 <?php
 include('footer.php');
 ?>

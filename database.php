@@ -1,7 +1,7 @@
 <?php
 'pgsql' => [
       'driver' => 'pgsql',
-        'host' => env('DB_HOST', 'ec2-12-34-56-789.compute-1.amazonaws.com'),
+        'host' => env('DB_HOST', 'https://deneme-emir.herokuapp.com/'),
         'port' => env('DB_PORT', '5432'),
         'database' => env('DB_DATABASE', 'dbXXXXXXXXXXXX'),
         'username' => env('DB_USERNAME', 'XXXXXXXXXXXXXX'),
