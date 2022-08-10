@@ -3,7 +3,7 @@
       'driver' => 'pgsql',
         'host' => env('DB_HOST', 'eu-cdbr-west-03.cleardb.net'),
         'port' => env('DB_PORT', '3306'),
-        'database' => env('DB_DATABASE', 'tdeneme'),
+        'database' => env('DB_DATABASE', 'heroku_123bc0464991a9f'),
         'username' => env('DB_USERNAME', 'b37f567b3f741c'),
         'password' => env('DB_PASSWORD', 'f43585bf'),
         'charset' => 'utf8',
