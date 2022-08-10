@@ -1,7 +1,7 @@
 <?php
-$servername = "db";
-$username = "db";
-$password = "db";
+$servername = "eu-cdbr-west-03.cleardb.net";
+$username = "b37f567b3f741c";
+$password = "f43585bf";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=db", $username, $password);
