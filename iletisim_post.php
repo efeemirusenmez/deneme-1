@@ -24,15 +24,9 @@ echo "</br>" ;
 
 echo "İsim-> $name <br>Soyad-> $surname<br>Kullanıcı adı-> $username<br>Mail-> $email";
 
-$sql = "INSERT INTO iletisim (name, surname,username,email, cins) VALUES ('aaa','aaa','aaa','aaa','1')";
-/* $stmt->bindParam(':name', $name);
-$stmt->bindParam(':surname', $surname);
-$stmt->bindParam(':username', $username);
-$stmt->bindParam(':email', $email);
-$stmt->bindParam(':cins', $cinsiyet); */
-$conn -> exec($sql);
-//$stmt= $conn->prepare($sql);
-//$stmt->execute([$name, $surname,$username ,$email, $cinsiyet]);
+$sql = "INSERT INTO iletisim (name, surname,username,email, cins) VALUES (?,?,?,?,?)";
+$stmt= $conn->prepare($sql);
+$stmt->execute([$name, $surname,$username ,$email, $cinsiyet]);
 ?>
 
 <!--?php
