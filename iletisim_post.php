@@ -8,7 +8,7 @@ include('dbconnect.php');
 
 <?php
 $name = $_POST['name'];
-$lastname = $_POST['surname'];
+$surname = $_POST['surname'];
 $username = $_POST['username'];
 $email = $_POST['email'];
 $cinsiyet=$_POST['cinsiyet'];
