@@ -19,7 +19,7 @@ if( $_POST['username'] == '' ) { echo 'Kullanııc adınızı yazın!'; }echo "<
 if( $_POST['email'] == '' ) { echo 'Mailinizi yazın!'; } echo "<br>" ;
 echo "</br>" ;
 
-echo "İsim-> $name <br>Soyad-> $lastname<br>Kullanıcı adı-> $username<br>Mail-> $email";
+echo "İsim-> $name <br>Soyad-> $surname<br>Kullanıcı adı-> $username<br>Mail-> $email";
 
 $sql = "INSERT INTO iletisim (name, surname,username,email, cins) VALUES (?,?,?,?,?)";
 $stmt= $conn->prepare($sql);
