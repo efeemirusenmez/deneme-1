@@ -24,7 +24,7 @@ echo "</br>" ;
 
 echo "İsim-> $name <br>Soyad-> $surname<br>Kullanıcı adı-> $username<br>Mail-> $email";
 
-$sql = "INSERT INTO iletisim (name, surname,username,email, cins) VALUES (aaa,aaa,aaa,aaa,aaa)";
+$sql = "INSERT INTO iletisim (name, surname,username,email, cins) VALUES ('aaa','aaa','aaa','aaa','1')";
 /* $stmt->bindParam(':name', $name);
 $stmt->bindParam(':surname', $surname);
 $stmt->bindParam(':username', $username);
