@@ -21,8 +21,8 @@ margin: 0px 0px 0px 62px;
 </style>
 <form action="iletisim_post.php" method="post" class="login">
     <p>
-    Adınız <br><input type="text" name="firstname" ><br>
-    Soyadınız <br> <input type="text" name="lastname" ><br>
+    Adınız <br><input type="text" name="name" ><br>
+    Soyadınız <br> <input type="text" name="surname" ><br>
     Kullanıcı adı<br> <input type="text" name="username"><br>
     Eposta adresiniz<br> <input type="text" name="email"><br>
 
@@ -37,7 +37,7 @@ margin: 0px 0px 0px 62px;
       ################
       # ad_soyad.php #
       ################
-      echo "Adınız $firstname ve soyadınız $lastname.";
+      echo "Adınız $name ve soyadınız $surname.";
      ?>
     </P>
  </form>
