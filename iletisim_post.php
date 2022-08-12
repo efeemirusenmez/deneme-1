@@ -7,14 +7,14 @@ include('dbconnect.php');
 
 
 <?php
-$name = $_POST['firstname'];
-$lastname = $_POST['lastname'];
+$name = $_POST['name'];
+$lastname = $_POST['surname'];
 $username = $_POST['username'];
 $email = $_POST['email'];
 $cinsiyet=$_POST['cinsiyet'];
 
-if( $_POST['firstname'] == '' ) { echo 'Adınızı yazın!'; }echo "<br>" ;
-if( $_POST['lastname'] == '' ) { echo 'Soyadınızı yazın!'; }echo "<br>" ;
+if( $_POST['name'] == '' ) { echo 'Adınızı yazın!'; }echo "<br>" ;
+if( $_POST['surname'] == '' ) { echo 'Soyadınızı yazın!'; }echo "<br>" ;
 if( $_POST['username'] == '' ) { echo 'Kullanııc adınızı yazın!'; }echo "<br>" ;
 if( $_POST['email'] == '' ) { echo 'Mailinizi yazın!'; } echo "<br>" ;
 echo "</br>" ;
