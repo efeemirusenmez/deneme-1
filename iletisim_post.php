@@ -21,7 +21,13 @@ echo "</br>" ;
 
 echo "İsim-> $name <br>Soyad-> $surname<br>Kullanıcı adı-> $username<br>Mail-> $email";
 
-$sql = "INSERT INTO iletisim (name, surname,username,email, cins) VALUES (?,?,?,?,?)";
+$sql = "INSERT INTO iletisim (name, surname,username,email, cins) VALUES (':name',':surname',':username',':email',':cins')";
+$stmt->bindParam(':name', $name);
+$stmt->bindParam(':surname', $surname);
+$stmt->bindParam(':username', $username);
+$stmt->bindParam(':email', $email);
+$stmt->bindParam(':cins', $cinsiyet);
+
 $stmt= $conn->prepare($sql);
 $stmt->execute([$name, $surname,$username ,$email, $cinsiyet]);
 ?>
