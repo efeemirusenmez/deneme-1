@@ -1,12 +1,15 @@
 <?php
 include('header.php');
 include('dbconnect.php');
+echo "test";
 ?>
 
 
 
 
 <?php
+
+echo "test";
 $name = $_POST['name'];
 $surname = $_POST['surname'];
 $username = $_POST['username'];
