@@ -1,10 +1,10 @@
 <?php
 
 //local de calıstırmak için
-//$servername = "db";
-//$username = "db";
-//$password = "db";
-//$dbname = "db";
+/* $servername = "db";
+$username = "db";
+$password = "db";
+$dbname = "db"; */
 
 
 //live da calıstırmak icin
@@ -14,6 +14,7 @@ $password = "f43585bf";
 $dbname = "heroku_123bc0464991a9f";
 
 try {
+ // $conn = new PDO('mysql:host=db;dbname=db', $username, $password);
   $conn = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_123bc0464991a9f', $username, $password);
   //$conn = new PDO("mysql://b37f567b3f741c:f43585bf@eu-cdbr-west-03.cleardb.net/heroku_123bc0464991a9f?reconnect=true");
   // set the PDO error mode to exception
