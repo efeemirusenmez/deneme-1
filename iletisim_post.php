@@ -23,7 +23,7 @@ echo "İsim-> $name <br>Soyad-> $lastname<br>Kullanıcı adı-> $username<br>Mai
 
 $sql = "INSERT INTO iletisim (name, surname,username,email, cins) VALUES (?,?,?,?,?)";
 $stmt= $conn->prepare($sql);
-$stmt->execute([$name, $lastname,$username ,$email, $cinsiyet]);
+$stmt->execute([$name, $surname,$username ,$email, $cinsiyet]);
 ?>
 
 <!--?php
