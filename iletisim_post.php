@@ -1,10 +1,8 @@
 <?php
 include('header.php');
-include('dbconnect.php');
+include('dbconnect.php');s
 echo "test";
 ?>
-
-
 
 
 <?php

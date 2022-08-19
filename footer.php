@@ -27,7 +27,7 @@
       <h5>Section</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+        <li class="nav-item mb-2"><a href="reset-password.php" class="nav-link px-0 text-white">Reset</a></li>
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>

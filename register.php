@@ -1,4 +1,7 @@
 <?php
+include('header.php');
+?>
+<?php
 // Include config file
 require_once "config.php";
  
@@ -23,18 +26,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt->execute([$param_username]); 
         $is_user_exist = $stmt->fetch();
             // Bind variables to the prepared statement as parameters
-
+            
         if($is_user_exist){
-        
+
                 $username_err = "This username is already taken.";
             
-        } 
-
-           
+        }            
     }
-
-    
-    // Validate password
+// Validate password
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";     
     } elseif(strlen(trim($_POST["password"])) < 6){

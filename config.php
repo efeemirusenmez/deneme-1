@@ -1,17 +1,17 @@
 <?php
-include('header.php');
 include('dbconnect.php');
 ?>
-<!--?php
+<?php
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-define('DB_SERVER', 'eu-cdbr-west-03.cleardb.net');
-define('DB_USERNAME', 'b37f567b3f741c');
-define('DB_PASSWORD', 'f43585bf');
-define('DB_NAME', 'heroku_123bc0464991a9f');
+define('DB_SERVER', 'db');
+define('DB_USERNAME', 'db');
+define('DB_PASSWORD', 'db');
+define('DB_NAME', 'db');
  
 /* Attempt to connect to MySQL database */
-$conn = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_123bc0464991a9f', $username, $password);
+//$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$conn = new PDO('mysql:host=db;dbname=db', $username, $password);
  
 // Check connection
 if($conn === false){
