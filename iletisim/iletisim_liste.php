@@ -1,6 +1,6 @@
 
 <?php
-include('header.php');
+include('klasor1/header.php');
 include('dbconnect.php');
 ?>
 

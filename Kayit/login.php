@@ -1,5 +1,5 @@
 <?php
-include('header.php');
+include('klasor1/header.php');
 ?>
 <?php
 // Check if the user is already logged in, if yes then redirect him to welcome page

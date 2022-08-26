@@ -1,8 +1,8 @@
 <?php
 
-include('header.php');
+include('klasor1/header.php');
 ?>
 
 <?php
-include('footer.php');
+include('klasor1/header.php');
 ?>
