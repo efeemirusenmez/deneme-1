@@ -44,8 +44,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $stmt = $conn->prepare($sql);
         $stmt->execute([$username,md5($password)]); 
+        echo "geldi";
         $is_user_pass = $stmt->fetch(PDO::FETCH_ASSOC);
-
+        echo "geldi";
             // Attempt to execute the prepared statement
             if($is_user_pass){
                 // Password updated successfully. Destroy the session, and redirect to login page
@@ -57,6 +58,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
 
         }
+}else{
+    echo "atladı";
 }
     
 ?>

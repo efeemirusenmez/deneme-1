@@ -54,7 +54,8 @@ Sorry, your browser does not support inline SVG.
           }
           else{
             ?>
-          <li><a href="logout.php" class="nav-link px-2 text-white" >Çıkış</a></li>           
+          <li><a href="logout.php" class="nav-link px-2 text-white" >Çıkış</a></li>
+          <li><a href="reset-password.php" class="nav-link px-2 text-white" >Yeni Şifre</a></li>           
             <?php
 
           }
