@@ -1,6 +1,6 @@
 <?php
 include('klasor1/header.php');
-include('dbconnect.php');s
+include('database/dbconnect.php');s
 echo "test";
 ?>
 
@@ -55,5 +55,5 @@ $conn->close();
 ?>
 
 <?php
-include('footer.php');
+include('klasor1/footer.php');
 ?>

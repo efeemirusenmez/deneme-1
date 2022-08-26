@@ -43,5 +43,5 @@ margin: 0px 0px 0px 62px;
  </form>
 
  <?php
-include('footer.php');
+include('klasor1/footer.php');
 ?>

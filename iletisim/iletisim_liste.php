@@ -1,7 +1,7 @@
 
 <?php
 include('klasor1/header.php');
-include('dbconnect.php');
+include('database/dbconnect.php');
 ?>
 
 <?php
@@ -38,5 +38,5 @@ else{
 ?>
 
 <?php
-include('footer.php');
+include('klasor1/footer.php');
 ?>

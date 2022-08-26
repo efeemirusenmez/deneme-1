@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <html>
 
 <head>
@@ -42,7 +39,7 @@ Sorry, your browser does not support inline SVG.
           <li><a href="iletisim_liste.php" class="nav-link px-2 text-white">Kayıt formu</a></li>
           <!--li><a href="https://www.mackolik.com/takim/karag%C3%BCmr%C3%BCk/puan-durumu/c3txoz57mu7w9y1jprvnv2flr" class="nav-link px-2 text-white">Fikstür</a></li>
           <li><a hreflang="en" href="https://www.wulfzsport.com/kategori/karagumruk-sk-urunler" target="blank" class="nav-link px-2 text-white">Forma</a></li-->
-          <li><a href="iletisim.php" target="blank" class="nav-link px-2 text-white" target="blank">İletisim</a></li>
+          <li><a href="index.php?sayfa=iletisim" target="blank" class="nav-link px-2 text-white" target="blank">İletisim</a></li>
 
           <?php
           if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){

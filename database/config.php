@@ -1,5 +1,5 @@
 <?php
-include('dbconnect.php');
+include('database/dbconnect.php');
 ?>
 <?php
 /* Database credentials. Assuming you are running MySQL
