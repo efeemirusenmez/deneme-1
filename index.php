@@ -1,5 +1,6 @@
 <?php
 include('klasor1/header.php');
+include('slider.php');
 if( @$_GET['sayfa'] == 'iletisim' )
 {
 	include('iletisim/iletisim.php');
