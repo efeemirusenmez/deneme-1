@@ -14,9 +14,9 @@
     <div class="col mb-3">
       <h5>Section</h5>
       <ul class="nav flex-column">
-      <li><a  href="anasayfa.php" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="iletisim_post.php" class="nav-link px-2 text-white">Klüp Tarihi</a></li>
-          <li><a href="https://www.mackolik.com/takim/karag%C3%BCmr%C3%BCk/puan-durumu/c3txoz57mu7w9y1jprvnv2flr" class="nav-link px-2 text-white">Fikstür</a></li>
+      <li><a  href="index.php" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="(iletisim/iletisim_post.php)" class="nav-link px-2 text-white"><font style="color:black">Klüp Tarihi</font></a></li>
+          <li><a href="index.php?sayfa=iletisim_post" class="nav-link px-2 text-white"><font style="color:black">Liste</font></a></li>
           <li><a hreflang="en" href="https://www.wulfzsport.com/kategori/karagumruk-sk-urunler" target="blank" class="nav-link px-2 text-white">Forma</a></li>
           <li><a href="iletisim.php" target="blank" class="nav-link px-2 text-white" target="blank">iletisim</a></li>
           

@@ -36,23 +36,22 @@ Sorry, your browser does not support inline SVG.
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a  href="index.php" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="iletisim_liste.php" class="nav-link px-2 text-white">Kayıt formu</a></li>
+          <li><a href="index.php?sayfa=iletisim_liste" class="nav-link px-2 text-white">Kayıt formu</a></li>
           <!--li><a href="https://www.mackolik.com/takim/karag%C3%BCmr%C3%BCk/puan-durumu/c3txoz57mu7w9y1jprvnv2flr" class="nav-link px-2 text-white">Fikstür</a></li>
           <li><a hreflang="en" href="https://www.wulfzsport.com/kategori/karagumruk-sk-urunler" target="blank" class="nav-link px-2 text-white">Forma</a></li-->
           <li><a href="index.php?sayfa=iletisim" target="blank" class="nav-link px-2 text-white" target="blank">İletisim</a></li>
-
           <?php
           if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           ?>
-          <li><a href="login.php" class="nav-link px-2 text-white" >Giriş</a></li>
-          <li><a href="register.php" target="blank" class="nav-link px-2 text-white" target="blank">Kayıt Ol</a></li>
+          <li><a href="index.php?sayfa=login" class="nav-link px-2 text-white" >Giriş</a></li>
+          <li><a href="index.php?sayfa=register" target="blank" class="nav-link px-2 text-white" target="blank">Kayıt Ol</a></li>
           
           <?php
           }
           else{
             ?>
-          <li><a href="logout.php" class="nav-link px-2 text-white" >Çıkış</a></li>
-          <li><a href="reset-password.php" class="nav-link px-2 text-white" >Yeni Şifre</a></li>           
+          <li><a href="index.php?sayfa=logout.php" class="nav-link px-2 text-white" >Çıkış</a></li>
+          <li><a href="index.php?sayfa=reset-password.php" class="nav-link px-2 text-white" >Yeni Şifre</a></li>           
             <?php
 
           }

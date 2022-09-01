@@ -1,6 +1,5 @@
 
 <?php
-include('klasor1/header.php');
 include('database/dbconnect.php');
 ?>
 
@@ -35,8 +34,4 @@ if($r){
 else{
     echo 'sonuc yok';
 }
-?>
-
-<?php
-include('klasor1/footer.php');
 ?>

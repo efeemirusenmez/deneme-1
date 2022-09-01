@@ -1,7 +1,4 @@
 <?php
-include('klasor1/header.php');
-?>
-<?php
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: welcome.php");
@@ -9,7 +6,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
  
 // Include config file
-require_once "config.php";
+require_once "database/config.php";
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -101,8 +98,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
-            <p >Did you forget your password? <a href="reset-password.php" target="_blank">Change password</a>.</p>
+            <p>Don't have an account? <a href="index.php?sayfa=register">Sign up now</a>.</p>
+            <p >Did you forget your password? <a href="index.php?sayfa=reset-password" target="_blank">Change password</a>.</p>
         </form>
     </div>
 </body>

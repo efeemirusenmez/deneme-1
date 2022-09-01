@@ -1,12 +1,7 @@
 <?php
-include('klasor1/header.php');
-include('database/dbconnect.php');s
-echo "test";
+include('database/dbconnect.php');
 ?>
-
-
 <?php
-
 echo "test";
 $name = $_POST['name'];
 $surname = $_POST['surname'];
@@ -52,8 +47,4 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 $conn->close();
-?>
-
-<?php
-include('klasor1/footer.php');
 ?>

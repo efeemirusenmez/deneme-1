@@ -1,7 +1,7 @@
-<?php
-include('klasor1/header.php');
-?>
 
+<?php
+include('database/dbconnect.php');
+?>
 <?php
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     ("location: login.php");

@@ -1,15 +1,10 @@
-<?php
-include('klasor1/header.php');
-?>
 <style>
 .login {
   background-color:dimgrey; 
 }
-
 .login input{
 display:block;
 margin: 5px 0px 0px 0px;
-
 }
 .login p{
     color:red
@@ -19,14 +14,12 @@ margin: 5px 0px 0px 0px;
 margin: 0px 0px 0px 62px;
 }
 </style>
-<form action="iletisim_post.php" method="post" class="login">
+<form action="index.php?sayfa=iletisim_post" method="post" class="login">
     <p>
     Adınız <br><input type="text" name="name" ><br>
     Soyadınız <br> <input type="text" name="surname" ><br>
     Kullanıcı adı<br> <input type="text" name="username"><br>
     Eposta adresiniz<br> <input type="text" name="email"><br>
-
-    
     
     Erkek <input type="radio" name="cinsiyet" value="1" checked="on"> 
     Kadin <input type="radio" name="cinsiyet" value="2"> 
@@ -34,14 +27,7 @@ margin: 0px 0px 0px 62px;
      <input type="reset" value="Sıfırla">
 
      <?
-      ################
-      # ad_soyad.php #
-      ################
       echo "Adınız $name ve soyadınız $surname.";
      ?>
     </P>
  </form>
-
- <?php
-include('klasor1/footer.php');
-?>
