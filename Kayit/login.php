@@ -1,106 +1,91 @@
 <?php
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
-    exit;
-}
- 
-// Include config file
-require_once "database/config.php";
- 
-// Define variables and initialize with empty values
-$username = $password = "";
-$username_err = $password_err = $login_err = "";
- 
-// Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
-    // Check if username is empty
-    if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter username.";
-    } else{
-        $username = trim($_POST["username"]);
-    }
-    
-    // Check if password is empty
-    if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter your password.";
-    } else{
-        $password = trim($_POST["password"]);
-    }
-    
-    // Validate credentials
-    if(empty($username_err) && empty($password_err)){
-        // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = ? and password = ?";
-                 
-        $stmt = $conn->prepare($sql);
-        $stmt->execute([$username,md5($password)]); 
-        $is_user_exist = $stmt->fetch(PDO::FETCH_ASSOC);
-            
-            // Set parameters
-           
-                        if($is_user_exist){
-                            
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $is_user_exist["id"];
-                            $_SESSION["username"] = $username;                            
-                            
-                            // Redirect user to welcome page
-                            header("location: welcome.php");
-                        } else{
-                            // Password is not valid, display a generic error message
-                            $login_err = "Invalid username or password.";
-                        }
-                    
-                } else{
-                    // Username doesn't exist, display a generic error message
-                    $login_err = "Invalid username or password.";
-                }
-            }
-         
+include('database/dbconnect.php');
 ?>
- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
-    </style>
-</head>
-<body>
-    <div class="wrapper">
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
 
-        <?php 
-        if(!empty($login_err)){
-            echo '<div class="alert alert-danger">' . $login_err . '</div>';
-        }        
-        ?>
+<html>
+  <head>
+  <title>üye kayıt</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <!-- mobil uyumlu kod -->
+        <meta name="viewport" content ="width=device-width, initial-scale=1"/>
 
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                <span class="invalid-feedback"><?php echo $username_err; ?></span>
-            </div>    
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+        <meta name="description" content="kedicik form "/>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"><!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <?php
+//print_r($_POST);
+
+    if( @$_POST['submit_control'] == 77 )
+    
+    {
+      //  echo "geliyor";
+        
+
+            $username=@$_POST["username"];
+            $password =@$_POST["password"];
+             
+
+            if( $username=="") $k_hatalar .= "ad yazınız.";    
+            if( $password=="") $k_hatalar .= "mail yazınız.";
+            
+            if($k_hatalar!=""){
+                echo $k_hatalar;
+            }
+
+            else if(@$_POST["k_password"]==@$_POST["k_password2"]) 
+            {
+                $ssss="INSERT INTO users(username, password) 
+                VALUES(
+                     '".$username."',
+                     '".$password."',
+                     '".md5($password)."'
+                                )";
+                    
+                
+                $conn->query($ssss);
+                    
+                echo "<span style='color:green;'>Formunuz başarılı.</span>";
+                print_r($_POST);
+                
+            }
+            else echo "Şifre hatalı";
+            
+    }
+    ?>
+    <br>
+    <h2 style="text-align:center">moNkeFT</h2>
+    <div class="cotainer p-5">
+        <div class="card p-5">
+        
+        <form   action="index.php?sayfa=login_post" method="POST">
+
+            <input type="hidden" name="submit_control" value="77">
+            <form action="index.php?sayfa=iletisim_post" method="post" class="login ozellogin">
+          
+            <div class="mb-3">
+                <label for="üadi">Username </label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="username" value="<?php echo @$_POST["username"]?>">   
             </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
+            <div class="mb-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password"placeholder="password" value="<?php echo @$_POST["password"]?>">
             </div>
-            <p>Don't have an account? <a href="index.php?sayfa=register">Sign up now</a>.</p>
-            <p >Did you forget your password? <a href="index.php?sayfa=reset-password" target="_blank">Change password</a>.</p>
-        </form>
+                      
+            
+            <button type="submit" class="btn btn-primary" id="kgonder" name="k_gonder" >Send</button>
+            <button  type="reset" class="btn btn-primary" >Reset</button>
+           
+        </form> 
+
+        </div>
     </div>
-</body>
+
+
+   </body>
 </html>

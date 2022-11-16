@@ -1,68 +1,55 @@
 <html>
 
 <head>
-<title >Deneme-Emir</title>
-<!-- CSS only -->
+<title >moNkeFT</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <link href="site.css" rel="stylesheet" >
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.1.js" crossorigin="anonymous"></script>
 
 <meta charset="UTF-8" />
+<style>
+.login.ozellogin {
+  background-color:#FCD535; 
+}
+.login.ozellogin input{
+display:block;
+margin: 5px 0px 0px 0px;
+}
+.login.ozellogin p{
+    color:black;
+    margin: 0px 0px 0px 62px;
+}
+.login.ozellogin fieldset{
+margin: 0px 0px 0px 62px;
+}
+</style>
 </head>
 
 <body>
 <header class="p-3 text-bg-dark">
-    <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
         <svg height="130" width="500">
-  <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"
-      style="stop-color:rgb(0,0,0);stop-opacity:1" />
-      <stop offset="100%"
-      style="stop-color:rgb(255,0,0);stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-  <text fill="#0000000" font-size="45" font-family="Verdana"
-  x="50" y="86">FKG</text>
-Sorry, your browser does not support inline SVG.
+        <link rel="shortcut icon" href="Fotograflar/logo.ico" type="image/x-icon">
+  <a class="navbar-brand" href="#">
+    <img src="Fotograflar/logo.png" width="120" height="120" class="d-inline-block align-top" alt="">
+    
+  </a>
+
 </svg>
           <!--svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg-->
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a  href="index.php" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="index.php?sayfa=iletisim_liste" class="nav-link px-2 text-white">Kayıt formu</a></li>
-          <!--li><a href="https://www.mackolik.com/takim/karag%C3%BCmr%C3%BCk/puan-durumu/c3txoz57mu7w9y1jprvnv2flr" class="nav-link px-2 text-white">Fikstür</a></li>
-          <li><a hreflang="en" href="https://www.wulfzsport.com/kategori/karagumruk-sk-urunler" target="blank" class="nav-link px-2 text-white">Forma</a></li-->
-          <li><a href="index.php?sayfa=iletisim" target="blank" class="nav-link px-2 text-white" target="blank">İletisim</a></li>
-          <?php
-          if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-          ?>
-          <li><a href="index.php?sayfa=login" class="nav-link px-2 text-white" >Giriş</a></li>
-          <li><a href="index.php?sayfa=register" target="blank" class="nav-link px-2 text-white" target="blank">Kayıt Ol</a></li>
-          
-          <?php
-          }
-          else{
-            ?>
-          <li><a href="index.php?sayfa=logout.php" class="nav-link px-2 text-white" >Çıkış</a></li>
-          <li><a href="index.php?sayfa=reset-password.php" class="nav-link px-2 text-white" >Yeni Şifre</a></li>           
-            <?php
+          <li><a  href="index.php" class="nav-link px-2 text-secondary">Home Page</a></li>
+          <li><a href="index.php?sayfa=products"  class="nav-link px-2 text-white" target="blank">Products</a></li>   
+          <li><a href="index.php?sayfa=iletisim"  class="nav-link px-2 text-white" target="blank">Payment</a></li>
+          <li><a href="index.php?sayfa=iletisim_liste" class="nav-link px-2 text-white">Data Base</a></li>
+          <li><a href="https://deneme.ddev.site:8037/" class="nav-link px-2 text-white">phpMyAdmin</a></li>
+          <li><a href="index.php?sayfa=login" class="nav-link px-2 text-white">Login</a></li>
 
-          }
-          ?>
-          
         </ul>
-
-        <!--form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-        </form-->
-
         
       </div>
     </div>

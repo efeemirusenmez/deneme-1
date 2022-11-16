@@ -1,21 +1,25 @@
+<link href="slider.css" rel="stylesheet" >
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
+  <div class="carousel-inner"  >
     <div class="carousel-item active">
-      <img src="Fotograflar/times-square.webp"width="0" height="600" class="d-block w-100" alt="...">
+      <a href="index.php?sayfa=products"><img id="img" src="Fotograflar/foto1.jpeg" class="d-block w-100" alt="..."></a>
     </div>
     <div class="carousel-item">
-      <img src="Fotograflar/new_york.jpg" width="0" height="600" class="d-block w-100" alt="...">
+      <a href="index.php?sayfa=products"><img id="img" src="Fotograflar/foto2.jpeg" class="d-block w-100" alt="..."></a>
     </div>
     <div class="carousel-item">
-      <img src="Fotograflar/sydney-opera-house.jpg"width="250" height="600" class="d-block w-100" alt="...">
+      <a href="index.php?sayfa=products"><img id="img" src="Fotograflar/foto3.jpeg" class="d-block w-100" alt="..."></a>
+    </div>
+    <div class="carousel-item">
+      <a href="index.php?sayfa=products"><img id="img" src="Fotograflar/foto4.jpeg" class="d-block w-100" alt="..."></a>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <button id="arrow"class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" >
+    <span id="arrow" class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <button id="arrow"class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span id="arrow" class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>

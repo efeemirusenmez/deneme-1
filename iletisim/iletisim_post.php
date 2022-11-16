@@ -1,8 +1,11 @@
 <?php
 include('database/dbconnect.php');
 ?>
+<html>
+    <body>
+    <link href="slider.css" rel="stylesheet" >
+  <img src="Fotograflar/The.gif" class="card-img-top" id="img" alt="..."  height="350">
 <?php
-echo "test";
 $name = $_POST['name'];
 $surname = $_POST['surname'];
 $username = $_POST['username'];
@@ -15,36 +18,13 @@ if( $_POST['username'] == '' ) { echo 'Kullanııc adınızı yazın!'; }echo "<
 if( $_POST['email'] == '' ) { echo 'Mailinizi yazın!'; } echo "<br>" ;
 echo "</br>" ;
 
-echo "İsim-> $name <br>Soyad-> $surname<br>Kullanıcı adı-> $username<br>Mail-> $email";
+echo "Ad ve Soyadınız-> $name<br>Mail-> $email <br>Kart numarası-> $username<br>Kart son kullanma tarihi-> $surname <br> Alınan nft->$cinsiyet";
 
 $sql = "INSERT INTO iletisim (name, surname,username,email, cins) VALUES (?,?,?,?,?)";
 $stmt= $conn->prepare($sql);
 $stmt->execute([$name, $surname,$username ,$email, $cinsiyet]);
-?>
 
-<!--?php
-$servername = "db";
-$username = "db";
-$password = "db";
-$dbname = "db";
+?>    
+</body>
 
-// Create connection
-$conn = new PDO('mysql:host=db;dbname=db', $username, $password);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT ID, surname ,username  FROM iletisim";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["id"]. " - Name: " . $row["surname"]. " " . $row["lastname"]. "<br>";
-  }
-} else {
-  echo "0 results";
-}
-$conn->close();
-?>
+</html>
