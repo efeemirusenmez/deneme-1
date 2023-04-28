@@ -4,7 +4,7 @@ include('database/dbconnect.php');
 
 <html>
   <head>
-  <title>üye kayıt</title>
+  <title>üye kayit</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <!-- mobil uyumlu kod -->
         <meta name="viewport" content ="width=device-width, initial-scale=1"/>
@@ -31,8 +31,8 @@ include('database/dbconnect.php');
             $password =@$_POST["password"];
              
 
-            if( $username=="") $k_hatalar .= "ad yazınız.";    
-            if( $password=="") $k_hatalar .= "mail yazınız.";
+            if( $username=="") $k_hatalar .= "ad yaziniz.";    
+            if( $password=="") $k_hatalar .= "mail yaziniz.";
             
             if($k_hatalar!=""){
                 echo $k_hatalar;
@@ -50,11 +50,11 @@ include('database/dbconnect.php');
                 
                 $conn->query($ssss);
                     
-                echo "<span style='color:green;'>Formunuz başarılı.</span>";
+                echo "<span style='color:green;'>Formunuz basarili.</span>";
                 print_r($_POST);
                 
             }
-            else echo "Şifre hatalı";
+            else echo "Şifre hatali";
             
     }
     ?>
@@ -85,7 +85,6 @@ include('database/dbconnect.php');
 
         </div>
     </div>
-
 
    </body>
 </html>

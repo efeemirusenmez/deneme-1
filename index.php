@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('klasor1/header.php');
 if( @$_GET['sayfa'] == 'iletisim' )
 {
@@ -15,6 +16,10 @@ else if( @$_GET['sayfa'] == 'products' )
 else if( @$_GET['sayfa'] == 'login' )
 {
 	include('Kayit/login.php');
+}
+else if( @$_GET['sayfa'] == 'istenilen' )
+{
+	include('istenilen.php');
 }
 else if( @$_GET['sayfa'] == 'iletisim_post' )
 {
@@ -36,9 +41,13 @@ else if( @$_GET['sayfa'] == 'products' )
 {
 	include('products.php');
 }
-else if( @$_GET['sayfa'] == 'top' )
+else if( @$_GET['sayfa'] == 'j' )
 {
-	include('top.php');
+	include('j.php');
+}
+else if( @$_GET['sayfa'] == 'logout' )
+{
+	include('logout.php');
 }
 else{
 	include('anasayfa.php');

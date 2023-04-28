@@ -25,6 +25,8 @@ margin: 5px 0px 0px 0px;
 margin: 0px 0px 0px 62px;
 }
 </style>
+  <link rel="icon" type="image/x-icon" href="Fotograflar/logo.png">
+</head>
 </head>
 
 <body>
@@ -45,13 +47,29 @@ margin: 0px 0px 0px 62px;
           <li><a  href="index.php" class="nav-link px-2 text-secondary">Home Page</a></li>
           <li><a href="index.php?sayfa=products"  class="nav-link px-2 text-white" target="blank">Products</a></li>   
           <li><a href="index.php?sayfa=iletisim"  class="nav-link px-2 text-white" target="blank">Payment</a></li>
-          <li><a href="index.php?sayfa=iletisim_liste" class="nav-link px-2 text-white">Data Base</a></li>
-          <li><a href="https://deneme.ddev.site:8037/" class="nav-link px-2 text-white">phpMyAdmin</a></li>
-          <li><a href="index.php?sayfa=login" class="nav-link px-2 text-white">Login</a></li>
+          <!--li><a href="index.php?sayfa=iletisim_liste" class="nav-link px-2 text-white">Data Base</a></li>
+          <li><a href="https://exit.ddev.site:8037/" class="nav-link px-2 text-white">phpMyAdmin</a></li>
+          <li><a href="index.php?sayfa=istenilen" class="nav-link px-2 text-white">Istenilen</a></li-->
+          <li> <?php echo  @$_SESSION['username'];
+          ?></li>
+          <?php
+          if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+          ?>
+          <li><a href="index.php?sayfa=login" class="nav-link px-2 text-white" >Giriş</a></li>
+          <!--li><a href="index.php?sayfa=register" target="blank" class="nav-link px-2 text-white" target="blank">Kayıt Ol</a></li-->
+          
+          <?php
+          }
+          else{
+            ?>
+          <li><a href="index.php?sayfa=logout" class="nav-link px-2 text-white" >Çıkış</a></li>
+          <?php
+
+          }
+          ?>
 
         </ul>
         
       </div>
     </div>
   </header>
-    
