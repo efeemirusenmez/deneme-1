@@ -27,7 +27,7 @@
 
 
         <?
-        echo "Adınız $name ve soyadınız $surname.";
+        echo "Adınız $name ve  soyadınız $surname.";
         ?>
         </P>
  </form>
