@@ -5,7 +5,7 @@
       <a href="index.php?sayfa=products"><img id="img" src="Fotograflar/foto1.jpeg" class="d-block w-100" alt="..."></a>
     </div>
     <div class="carousel-item">
-      <a href="index.php?sayfa=products"><img id="img" src="Fotograflar/foto2.jpeg" class="d-block w-100" alt="..."></a>
+      <a href="index.php?sayfa=products" ><img id="img" src="Fotograflar/foto2.jpeg" class="d-block w-100" alt="..."></a>
     </div>
     <div class="carousel-item">
       <a href="index.php?sayfa=products"><img id="img" src="Fotograflar/foto3.jpeg" class="d-block w-100" alt="..."></a>
