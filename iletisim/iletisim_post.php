@@ -24,7 +24,7 @@ $sql = "INSERT INTO iletisim (name, surname,username,email, cins) VALUES (?,?,?,
 $stmt= $conn->prepare($sql);
 $stmt->execute([$name, $surname,$username ,$email, $cinsiyet]);
 
-?>    
+ ?>    
 </body>
 
 </html>
